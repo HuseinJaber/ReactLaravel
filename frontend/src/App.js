@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import MainNewsCarousel from './components/MainNewsCarousel';
+import NewsCategories from './components/NewsCategories';
+import './scss/app.scss';
+import MostRead from './components/MostRead';
+import Footer from './components/Footer';
+import {LiaCopyrightSolid} from 'react-icons/lia'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="carousel-container">
+      <Menu />
+      <MainNewsCarousel />  
+      </div>
+      <NewsCategories />
+      <hr />
+      <MostRead />
+      <hr />
+      <Footer />
+      <div className='copyrights'>
+        <h1>Copyrights<LiaCopyrightSolid /> by Hussein Jaber</h1>
+      </div>
+      
     </div>
   );
 }
